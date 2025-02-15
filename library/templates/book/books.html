@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% block content %}
+
+    <section class="book_section">
+        <div class="container-fluid py-3 text-center justify-content-center align-items-start">
+            <h1 style="font-size: 45px" class="book_section_title py-5">Books</h1>
+            <form method="get">
+                <select class="form-select" name="order" onchange="this.form.submit()"
+                        style="width: 60%; margin: 30px auto">
+                    <option value="-id" selected>Date, new to old</option>
+                    <option value="id">Date, old to new</option>
+                    <option value="title">Ascending (A-Z)</option>
+                    <option value="-title">Descending (Z-A)</option>
+                </select>
+            </form>
+            <form method="get" action="{% url 'list_books' %}" style="width: 60%; margin: 20px auto;">
+                <div class="form-floating mb-3">
+                    <input type="search" class="form-control" id="floatingInput"
+                           name="search" value="{{ search }}" placeholder="Enter Book Title or Author Name">
+                    <label for="floatingInput">Enter Book Title or Author Name</label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Search</button>
+            </form>
+
+            <div class="cards d-flex gap-5 justify-content-center align-items-start my-4">
+                {% for i in books %}
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ i.cover_image.url }}" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ i.title }}</h5>
+                            <p class="card-text">{{ i.price }} $</p>
+                            {% if i.pk %}
+                                <a href="{% url 'book_detail' pk=i.pk %}" class="btn"
+                                   style="background-color: #1D7B84">Read More</a>
+                            {% else %}
+                                <pre>{{ i }}</pre>
+                                <div class="alert alert-danger" role="alert">
+                                    Error: Book with title "{{ i.title }}" has no valid primary key.
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

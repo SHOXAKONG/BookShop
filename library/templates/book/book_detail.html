@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% block content %}
+    <section class="book_detail">
+        <div class="container p-5">
+            <h1>
+                About Book
+            </h1>
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" style="width: 400px">
+
+                </div>
+                <div class="col-8">
+                    <h2>{{ book.title }}</h2>
+                    <p>{{ book.about }}</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>About The Author</h2>
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="{{ book.author.author_image.url }}">
+                                </div>
+                                <div class="col-8">
+                                    <h4>{{ book.author }}</h4>
+                                    <p>{{ book.author.about }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 text-center book_price">
+                    <p>{{ book.price }}$</p>
+                    <a class="btn btn-primary" href="{% url 'add_to_cart' book.id %}">Add To Cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

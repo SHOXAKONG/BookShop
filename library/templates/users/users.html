@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul li a {
+            display: flex;
+            margin-bottom: 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form input {
+            width: 30%;
+            padding: 15px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        form button {
+            width: 30%;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Users List</h1>
+    <ul>
+        {% for user in users %}
+        <li><a href="#"><h4>Fullname:</h4> {{user.firstname}} {{user.lastname}} 
+            <h4>Role:</h4> {{ user.role }} </a></li>
+        {% endfor %}
+    </ul>
+
+    <form>
+        <input name="search" value="{{search}}" placeholder="Search Book">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

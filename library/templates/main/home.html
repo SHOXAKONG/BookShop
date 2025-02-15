@@ -1,0 +1,134 @@
+{% extends 'main.html' %}
+{% block content %}
+
+    <section class="home">
+        <div class="container-fluid">
+            <h1>BLOOM BOOKSHOP</h1>
+            <p>Step Into Your Local Bookstore, Online: Expertly Curated, Community-Driven</p>
+            <a href="{% url 'list_books' %}" type="button" class="btn">Shop Now</a>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container-fluid">
+            <h1>Who We Are</h1>
+            <p>
+                Welcome to Bloom, your favorite hometown bookstore now online! We're passionate about sharing the joy of
+                reading and connecting book lovers everywhere.
+            </p>
+            <p>
+                At Bloom, we’re more than booksellers – we’re community builders. Discover curated selections, lively
+                events, and your next favorite book with us.Trust Bloom for expertly curated books, author talks, and
+                workshops, all guided by passionate booksellers with decades of expertise.
+            </p>
+            <div class="quote-container">
+                <div class="quote-line"></div>
+                <div class="quote-content">
+                    <span class="quote-icon top">“</span>
+                    <p class="quote-text"><em>“There is no friend as loyal as a book.”</em><br><strong>- Ernest
+                        Hemingway</strong></p>
+                    <span class="quote-icon bottom">”</span>
+                </div>
+                <div class="quote-line"></div>
+            </div>
+        </div>
+        <div class="page-two">
+            <div class="container-fluid">
+                <div class="row gap-3 align-items-center">
+                    <div class="col-5">
+                        <img src="/static/images/about-page.png">
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Bloom Programming</h1>
+                                <p>To further community engagement, we host an array of literary and cultural events,
+                                    including monthly book clubs for children and adults, an annual book fair, and an
+                                    annual holiday gift bazaar.</p>
+                                <p>Inspired by London’s Gresham College — an institution providing free public lectures
+                                    since 1597 — our mission is to foster the advancement of culture and knowledge.
+                                    Bloom Programming events seek to entertain our sense of curiosity, inspire new areas
+                                    of interest, and ultimately contribute to Tampa’s emergence as a cultural
+                                    destination.</p>
+                                <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Learn
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recommend">
+            <div class="container-fluid">
+                <h1>What Booksellers Recommend</h1>
+                <h2>Jane's Picks</h2>
+                <p>For the lover of thought-provoking fiction and timeless classics. Jane's picks are sure to challenge
+                    your mind and stir your emotions.</p>
+                <div class="col-12">
+                    <div class="books-image d-flex gap-5 align-items-center justify-content-center my-3">
+                        <img src="/static/images/Book1.png" alt="">
+                        <img src="/static/images/Book2.png" alt="">
+                        <img src="/static/images/Book3.png" alt="">
+                        <img src="/static/images/Book4.png" alt="">
+                        <img src="/static/images/Book5.png" alt="">
+                    </div>
+                </div>
+                <h2 class="mt-5">Sarah's Picks</h2>
+                <p>For the adventure-seeker and mystery enthusiast. Sarah's selections will keep you on the edge of your
+                    seat with thrilling plots and unexpected twists.</p>
+                <div class="col-12">
+                    <div class="books-image d-flex gap-5 align-items-center justify-content-center my-3">
+                        <img src="/static/images/Book6.png" alt="">
+                        <img src="/static/images/Book7.png" alt="">
+                        <img src="/static/images/Book8.png" alt="">
+                        <img src="/static/images/Book9.png" alt="">
+                        <img src="/static/images/Book10.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bloom Programming is a vibrant initiative dedicated to enriching the Tampa community through a
+                    diverse range of literary and cultural events. Our programming is designed to foster intellectual
+                    curiosity, encourage lifelong learning, and provide a space for meaningful discussions and creative
+                    expression.
+
+                    Our Offerings:
+                    - 📚 Monthly Book Clubs: We host engaging book discussions for both children and adults, offering a
+                    welcoming space to explore literature, share insights, and connect with fellow book lovers.
+                    - 📖 Annual Book Fair: A celebration of books and storytelling featuring local and national authors,
+                    book signings, panel discussions, and literary-themed activities for all ages.
+                    - 🎁 Annual Holiday Gift Bazaar: A festive marketplace showcasing unique, handcrafted items from
+                    local artisans, perfect for holiday gifting.
+                    - 🎤 Guest Lectures & Speaker Series: Inspired by London’s Gresham College, we invite scholars,
+                    authors, and cultural leaders to share knowledge on a wide array of topics, from history and science
+                    to the arts and philosophy.
+                    - 🎭 Creative Workshops & Performances: From poetry readings and writing workshops to theater
+                    performances and storytelling nights, we aim to celebrate the arts in all their forms.
+
+                    ### Our Mission:
+                    Bloom Programming is more than just an events series—it’s a movement to cultivate a thriving
+                    cultural landscape in Tampa. By offering accessible and enriching experiences, we seek to empower
+                    individuals, build community connections, and contribute to the city’s growth as a dynamic cultural
+                    hub.
+
+                    Whether you’re a lifelong learner, an aspiring writer, or simply someone who loves the arts, Bloom
+                    Programming welcomes you to be part of our journey. Stay tuned for upcoming events and join us in
+                    celebrating the power of knowledge and creativity! 🌿✨
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

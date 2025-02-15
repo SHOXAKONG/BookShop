@@ -1,0 +1,294 @@
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0 150px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: white;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-weight: 900;
+}
+
+.navbar .navbar-nav {
+    gap: 20px;
+}
+
+.navbar .nav-link {
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: gray;
+}
+
+.navbar .shop {
+    background-color: #1D7B84;
+    border-radius: 10px;
+}
+
+.navbar .search {
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 2px white;
+}
+
+.navbar-icon {
+    color: white;
+    font-size: 30px;
+}
+
+/*-----------------------------------------------------------------------------Home---------------------------------------------------------------------------------------------*/
+.home {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("images/home.png");
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 150px;
+}
+
+
+.home .container-fluid h1 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+}
+
+.home .container-fluid p {
+    color: white;
+    font-size: 30px
+}
+
+.home .btn {
+    display: block;
+    color: white;
+    width: 200px;
+    height: 60px;
+    background-color: #1D7B84;
+    text-align: center;
+    font-size: 24px;
+    line-height: 45px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.home .btn:hover {
+    color: gray;
+}
+
+/*------------------------------------------------------------------------About---------------------------------------------------------------------------------------------*/
+
+.about {
+    padding: 100px 0;
+}
+
+.about .container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 150px;
+}
+
+.about .container-fluid h1 {
+    font-size: 38px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.about h1 ~ p {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px 0;
+    width: 100%;
+}
+
+.quote-line {
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    position: relative;
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+    font-family: Instrument Sans, sans-serif;
+}
+
+.quote-icon {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.top {
+    position: absolute;
+    top: -38px;
+    background-color: white;
+    padding: 0 10px;
+    z-index: 1000;
+}
+
+.bottom {
+    position: absolute;
+    bottom: -60px;
+    background: white;
+    padding: 0 10px;
+    z-index: 1000;
+
+}
+
+.quote-text {
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.5;
+    margin: 50px 0;
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------------Page-2---------------------------------------------------------------------------------------*/
+
+.page-two .container-fluid h1 {
+    text-align: start;
+    margin-bottom: 30px;
+}
+
+.page-two .container-fluid p {
+    text-align: start;
+    margin-bottom: 30px;
+}
+
+.page-two .btn {
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    transition: all 0.3s ease;
+}
+
+.page-two .btn:hover {
+    color: gray;
+}
+
+.page-two .col-12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ------------------------------------------------------------------------Recommendation----------------------------------------------------------------- */
+
+.recommend .container-fluid {
+    padding: 100px 0;
+}
+
+.recommend .container-fluid h1 {
+    margin-bottom: 50px;
+}
+
+.recommend .container-fluid p {
+    display: block;
+    font-style: italic;
+    width: 50%;
+}
+
+/* --------------------------------------------------------------------Footer----------------------------------------------------------------------------- */
+
+.footer {
+    background-color: black;
+}
+
+.footer .col-12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .link {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .link a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: white;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s ease;
+}
+
+.footer .col-12 h2 {
+    color: white;
+}
+
+.footer a:hover {
+    color: gray;
+}
+
+
+.forma {
+    display: flex;
+    gap: 10px;
+}

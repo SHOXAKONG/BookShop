@@ -1,0 +1,100 @@
+.login_page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(125deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+}
+
+.login_page h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.login_page .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.login_page .container form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.login_page .container button {
+    background-color: #1D7B84;
+    color: white;
+}
+
+.login_page .container button:hover {
+    background-color: #01848e;
+}
+
+.login_page .container p {
+    font-size: 18px;
+    color: white;
+}
+
+.login_page .container a {
+    color: blue;
+}
+
+.login_page .container a:hover {
+    color: darkblue;
+}
+
+/*-------------------------------------------------------Register----------------------------------------------------------------------------*/
+
+.register {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    width: 100%;
+}
+
+
+
+.register .container h2 {
+    display: block;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.register .container form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.register .container button {
+    background-color: #1D7B84;
+    color: white;
+}
+
+.register .container button:hover {
+    background-color: #01848e;
+}
+
+.register .container p {
+    display: block;
+    font-size: 18px;
+    color: white;
+    width: 40%;
+    margin: 20px auto;
+
+
+}
+
+.register .container a {
+    color: blue;
+}
+
+.register .container a:hover {
+    color: darkblue;
+}
+
